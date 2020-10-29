@@ -8,10 +8,9 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon --inspect index --ignore data.json",
-    "test": "jest --watchAll --noStackTrace"
+    "test": "jest --watchAll --noStackTrace --colors"
   },
   "homepage": "https://github.com/hihi-2020/express-boilerplate",
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hihi-2020/express-boilerplate.git"
@@ -21,7 +20,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4"
+    "express-handlebars": "^4.0.6",
+    "handlebars": "^4.7.6"
   },
   "devDependencies": {
     "jest": "^26.0.1",
