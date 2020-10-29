@@ -2,6 +2,8 @@ const express = require('express')
 const hbs = require('express-handlebars')
 const fs = require('fs')
 
+const router = express.Router() //does this go here or index.js?
+
 // const concreteNouns = require('./concreteNouns.json')
 
 // const converterRoutes = require('./converter')

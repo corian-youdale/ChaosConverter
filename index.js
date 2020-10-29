@@ -1,4 +1,7 @@
 const server = require('./server')
+const router = express.Router()
+
+
 
 const port = process.env.PORT || 3000
 
