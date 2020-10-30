@@ -1,12 +1,13 @@
 const environment = process.env.NODE_ENV || 'development'
-const config = require('./knexfile') [environment]
-const connection = require('knex')(config)
+// const config = require('./knexfile') [environment]
+// const connection = require('knex')(config)
 
 module.exports = {
-    showSomething,
+    
 }
 
-function showSomething (db = connection) {
-    return db('databaseName')
-    .select()
+
+function converter (db = connection) {
+    return db('converter')
+    .insert()
 }

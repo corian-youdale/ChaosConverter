@@ -1,14 +1,15 @@
 const express = require('express')
 const hbs = require('express-handlebars')
-const fs = require('fs')
-
-const router = express.Router() //does this go here or index.js?
-
-// const concreteNouns = require('./concreteNouns.json')
-
-// const converterRoutes = require('./converter')
+const routes = require('./routes')
 
 const server = express()
+
+// const fs = require('fs') //reading json files?
+// const router = express.Router() 
+
+// const concreteNouns = require('./concreteNouns.json')
+// const converterRoutes = require('./converter')
+
 
 // Middleware
 server.engine('hbs', hbs({
@@ -21,19 +22,7 @@ server.use(express.urlencoded({extended: true}))
 
 
 // Routes
-// server.use('/', converterRoutes)
-
-// server.get('/', (req,res)=>{
-//   const viewData = {
-//     concreteNouns
-//   }
-//   res.render('home', viewData)
-// }
-
-server.get('/', (req,res) => {
-  res.render('home')
-})
-
+server.use('/', routes)
 
 
 module.exports = server
