@@ -4,28 +4,38 @@
     <input type="number" id="depositQuantity" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
     <label for="deposit-type"> Unit(s) of</label>
     <input type="text" id="depositType" name="depositType" size="5" required>
-    <button value="convert" onclick="runConverter()">CONVERT</button>
+    <button value="convert" id="convertButton" >CONVERT</button>
     <br><br>
     <label for="convertedQuantity" name="convertedQuantity">We Can Currently Offer You</label>
     <input class="convertedQuantity" id="convertedQuantity" type="text" size="2">
     <label for="convertedType">Units of</label>
     <input class="convertedType" id="convertedType" type="text">
+    <br><br>
+    <button value="reset" id="reset" style="display: none;">New Conversion</button>
 
     {{!change <button onclick=""> to <form onsubmit=""> once db is setup and change GET to POST}}
 
-<script>
+    <script>
+
+    const convertButton = document.getElementById('convertButton')
 
     const convertedQuantity = document.getElementById('convertedQuantity')
     const convertedType = document.getElementById('convertedType')   
 
     const singularSeedTypes = ["Pizza", "Rock", "Elephant", "Old Tissue", "Magnesium"]
 
-
-
-
     function runConverter () {
         convertedQuantity.value = Math.floor(Math.random()*42)
         convertedType.value = singularSeedTypes[Math.floor(Math.random() * singularSeedTypes.length)]
 }
-           
+
+
+    document.getElementById('convertButton').addEventListener("click", ()=>{
+        runConverter();
+        document.getElementById('convertButton').style.display = 'none';
+        document.getElementById('reset').style.display = 'block'
+    })
+
+    
+
 </script>
