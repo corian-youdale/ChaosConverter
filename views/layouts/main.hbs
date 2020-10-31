@@ -13,17 +13,6 @@
         {{{body}}}
     </div>
 
-    <form action="/result" method="GET" id="converter" {{!onsubmit="runConverter()"}}>
-    <label for="depositQuantity">Find the Current Chaos Conversion for</label>
-    <input type="number" id="depositQuantity" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
-    <label for="deposit-type"> Unit(s) of</label>
-    <input type="text" id="depositType" name="depositType" size="5" required>
-    <button type="submit" form="converter" value="submit" onclick="runConverter()">CONVERT</button>
-    <br><br>
-    
-
-    {{!change <button onclick=""> to <form onsubmit=""> once db is setup and change GET to POST}}
-
 </form>
 
 </body>
@@ -34,14 +23,9 @@
 <script>
 
     const convertedQuantity = document.getElementById('convertedQuantity')
-
+    const convertedType = document.getElementById('convertedType')   
     function runConverter () {
-      convertedQuantity.value = Math.floor(Math.random()*420)
+        convertedQuantity = Math.floor(Math.random()*10)
 }
-
-    const depositQuantity = document.getElementById('depositQuantity')
-    const depositQuantity2 = document.getElementById('depositQuantity2')   
-    function deposit() {
-        depositQuantity2.value = depositQuantity.value
-    }
+           
 </script>

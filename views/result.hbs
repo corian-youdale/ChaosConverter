@@ -1,8 +1,9 @@
-<label for="depositQuantity">Current Available Conversions for</label>
-    <input type="number" id="depositQuantity2" name="depositQuantity2" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
+ <form action="/result" method="GET" id="converter" {{!onsubmit="runConverter()"}}>
+    <label for="depositQuantity">Find the Current Chaos Conversion for</label>
+    <input type="number" id="depositQuantity" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
     <label for="deposit-type"> Unit(s) of</label>
     <input type="text" id="depositType" name="depositType" size="5" required>
-
+    <button type="submit" form="converter" value="submit" onclick="runConverter()">CONVERT</button>
 
 
 <label for="convertedQuantity">We Can Currently Offer You</label>
