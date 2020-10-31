@@ -3,11 +3,11 @@ const environment = process.env.NODE_ENV || 'development'
 // const connection = require('knex')(config)
 
 module.exports = {
-    
+    // converterResults
 }
 
 
-function converter (db = connection) {
-    return db('converter')
-    .insert()
-}
+// function converterResults (db = connection) {
+//     return db('converter')
+//     .insert()
+// }

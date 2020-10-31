@@ -1,38 +1,47 @@
 <html lang="en">
 <head>
     {{!-- stylesheet link, title --}}
-
+    <link rel="stylesheet" href="/main.css">
+    <meta charset="utf-8">
+    <title>ChaosConverter</title>
 
 </head>
 
 <body>
-    <header>
-        
-    </header>
+
     <div class="container">
         {{{body}}}
     </div>
 
+    <form action="/result" method="GET" id="converter" {{!onsubmit="runConverter()"}}>
+    <label for="depositQuantity">Find the Current Chaos Conversion for</label>
+    <input type="number" id="depositQuantity" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
+    <label for="deposit-type"> Unit(s) of</label>
+    <input type="text" id="depositType" name="depositType" size="5" required>
+    <button type="submit" form="converter" value="submit" onclick="runConverter()">CONVERT</button>
+    <br><br>
+    
 
-    {{!-- scripts --}}
+    {{!change <button onclick=""> to <form onsubmit=""> once db is setup and change GET to POST}}
+
+</form>
 
 </body>
 
 <h1>-.-</h1>
 
+    {{!-- scripts --}}
+<script>
 
+    const convertedQuantity = document.getElementById('convertedQuantity')
 
+    function runConverter () {
+      convertedQuantity.value = Math.floor(Math.random()*420)
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+    const depositQuantity = document.getElementById('depositQuantity')
+    const depositQuantity2 = document.getElementById('depositQuantity2')   
+    function deposit() {
+        depositQuantity2.value = depositQuantity.value
+    }
+</script>

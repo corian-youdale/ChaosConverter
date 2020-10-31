@@ -5,6 +5,5 @@ install express
 install handlebars
 install express-handlebars
 install nodemon
-install knex(?)
 
 set up server.js to require converter.js
