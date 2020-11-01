@@ -1,24 +1,31 @@
-<h1>Chaos Converter</h1>
-
-    <label for="depositQuantity">Find the Current Chaos Conversion for</label>
-    <input type="number" id="depositQuantity required" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
-    <label for="deposit-type"> Unit(s) of</label>
-    <input type="text" id="depositType required" name="depositType" size="5" required>
-    <button value="convert" id="convertButton" >CONVERT</button>
-    <br><br>
-    <label for="convertedQuantity" name="convertedQuantity">We Can Currently Offer You</label>
-    <input class="convertedQuantity" id="convertedQuantity" type="text" size="2">
-    <label for="convertedType">Units of</label>
-    <input class="convertedType" id="convertedType" type="text">
-    <br><br>
-    <button value="reset" id="reset" style="display: none;">New Conversion</button>
+<div class="container converter">
+    <h1>Chaos Converter</h1>
+    <br>
+    <div class="converter-portion">
+        <label for="depositQuantity">Find the Current Chaos Conversion for</label>
+            <input class="" type="number" id="depositQuantity " name="depositQuantity" min="1" step="1">
+        <label for="deposit-type"> Unit(s) of</label>
+            <input type="text" id="depositType" name="depositType" size="20" >
+    </div>
+    <br>
+    <div class="converter-portion">
+        <button class="button" value="convert" id="convertButton" >CONVERT</button>
+        <br><br>
+        <label for="convertedQuantity" name="convertedQuantity">We Can Currently Offer You</label>
+        <input class="" id="convertedQuantity" type="text" size="2">
+        <label for="convertedType">Units of</label>
+            <input class="convertedType" id="convertedType" type="text">
+    </div>
+    <br>
+        <button class="button" value="reset" id="reset" style="display: none;">New Conversion</button>
+</div>
 
     <script>
 
     const convertButton = document.getElementById('convertButton')
 
     const convertedQuantity = document.getElementById('convertedQuantity')
-    const convertedType = document.getElementById('convertedType')   
+    const convertedType = document.getElementById('convertedType')
 
     const singularSeedTypes = ["Pizza", "Rock", "Elephant", "Old Tissue", "Magnesium"]
 
@@ -29,10 +36,10 @@
 
 
     document.getElementById('convertButton').addEventListener("click", ()=>{
-        runConverter();
-        document.getElementById('convertButton').style.display = 'none';
-        document.getElementById('reset').style.display = 'block'
-  })
+            runConverter();
+            document.getElementById('convertButton').style.display = 'none';
+            document.getElementById('reset').style.display = 'inline'
+    })
     
 
 </script>
