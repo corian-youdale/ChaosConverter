@@ -1,0 +1,11 @@
+
+* {
+    background-color:  #167acc;
+    /* background-color: #cf1717 */
+    font-family: 'Tomorrow', sans-serif;
+}
+
+header{
+    background-image: url("/public/images/bocLogo.png")
+}
+

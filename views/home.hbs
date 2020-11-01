@@ -1,9 +1,9 @@
-<h1>Wello Horld</h1>
+<h1>Chaos Converter</h1>
 
     <label for="depositQuantity">Find the Current Chaos Conversion for</label>
-    <input type="number" id="depositQuantity" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
+    <input type="number" id="depositQuantity required" name="depositQuantity" pattern=".{1}" title="Enter A Positive Integer" min="1" step="1" required>
     <label for="deposit-type"> Unit(s) of</label>
-    <input type="text" id="depositType" name="depositType" size="5" required>
+    <input type="text" id="depositType required" name="depositType" size="5" required>
     <button value="convert" id="convertButton" >CONVERT</button>
     <br><br>
     <label for="convertedQuantity" name="convertedQuantity">We Can Currently Offer You</label>
@@ -12,8 +12,6 @@
     <input class="convertedType" id="convertedType" type="text">
     <br><br>
     <button value="reset" id="reset" style="display: none;">New Conversion</button>
-
-    {{!change <button onclick=""> to <form onsubmit=""> once db is setup and change GET to POST}}
 
     <script>
 
@@ -34,8 +32,7 @@
         runConverter();
         document.getElementById('convertButton').style.display = 'none';
         document.getElementById('reset').style.display = 'block'
-    })
-
+  })
     
 
 </script>
